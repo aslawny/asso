@@ -28,7 +28,9 @@
       </nav>
     </div>
     <!-- current page -->
-    <router-view />
+    <div>
+      <router-view />
+    </div>
     <!-- footer-->
     <nav navbar-expand-lg class="navbar fixed-bottom navbar-dark bg-dark">
       <ul class="navbar-nav mr-auto text-center">
