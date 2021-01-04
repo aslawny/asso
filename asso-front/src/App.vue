@@ -32,9 +32,7 @@
     <!-- footer-->
     <nav navbar-expand-lg class="navbar fixed-bottom navbar-dark bg-dark">
       <ul class="navbar-nav mr-auto text-center">
-        <li class="nav-item">
-          <HelloWorld msg="Bienvenue sur le site d'Annette" />
-        </li>
+        <li class="nav-item"></li>
       </ul>
       <a class="navbar-brand" href="mailto:'john.smith@toto.com'"> Nous Contacter</a>
     </nav>
