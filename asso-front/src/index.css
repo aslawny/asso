@@ -1,0 +1,16 @@
+center {
+    text-align: center;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: black;
+}
+
+nav .navbar-nav li a {
+    color: #d1b9ab !important;
+    font-size: 14px;
+}
