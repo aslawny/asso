@@ -15,7 +15,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <ul class="navbar-center navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
               <router-link class="nav-link" to="/">Home</router-link>
             </li>
@@ -26,12 +26,13 @@
               <router-link class="nav-link" to="/coaching">Coaching</router-link>
             </li>
           </ul>
-          <img src="./assets/logo.png" />
         </div>
       </nav>
     </div>
     <!-- current page -->
     <div>
+      <br /><br /><br />
+      <img src="./assets/logo.png" />
       <br /><br />
       <router-view />
     </div>
