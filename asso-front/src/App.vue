@@ -2,7 +2,7 @@
   <div id="app">
     <!-- header -->
     <div id="nav">
-      <nav class="navbar fixed-top navbar-expand-lg">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
         <button
           class="navbar-toggler"
           type="button"
@@ -15,7 +15,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 nav justify-content-center">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
               <router-link class="nav-link" to="/">Home</router-link>
             </li>
