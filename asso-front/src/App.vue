@@ -44,7 +44,10 @@
     <!-- current page -->
     <div>
       <br /><br /><br />
+      <h4>La Shirley Family présente</h4>
+      <h1>La Clinique RH</h1>
       <img src="./assets/logo.png" />
+      <h4>Depuis 2018</h4>
       <br /><br />
       <router-view />
     </div>

@@ -7,6 +7,8 @@ center {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: black;
+    font-family: 'Lora', serif;
+    ;
 }
 
 nav .navbar-nav li a {
@@ -38,4 +40,8 @@ nav .navbar-nav li a {
 .navbar-toggler-icon:focus {
     outline: none;
     box-shadow: none;
+}
+
+h1 {
+    font-size: 100px;
 }
