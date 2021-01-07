@@ -7,22 +7,34 @@
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarTogglerDemo03"
-          aria-controls="navbarTogglerDemo03"
+          data-target="#navbarHeader"
+          aria-controls="navbarHeader"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <div class="collapse navbar-collapse" id="navbarHeader">
           <ul class="navbar-center navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
+            <li
+              class="nav-item"
+              v-on:click="setActive('/')"
+              :class="{ active: isActive('/') }"
+            >
               <router-link class="nav-link" to="/">Home</router-link>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              v-on:click="setActive('contact')"
+              :class="{ active: isActive('contact') }"
+            >
               <router-link class="nav-link" to="/contact">Reconversion</router-link>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              v-on:click="setActive('coaching')"
+              :class="{ active: isActive('coaching') }"
+            >
               <router-link class="nav-link" to="/coaching">Coaching</router-link>
             </li>
           </ul>
@@ -50,5 +62,16 @@
 export default {
   name: "App",
   components: {},
+  data() {
+    return { activeItem: "/" };
+  },
+  methods: {
+    isActive: function (menuItem) {
+      return this.activeItem === menuItem;
+    },
+    setActive: function (menuItem) {
+      this.activeItem = menuItem; // no need for Vue.set()
+    },
+  },
 };
 </script>

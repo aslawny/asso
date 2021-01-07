@@ -3,7 +3,6 @@ center {
 }
 
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
@@ -11,11 +10,16 @@ center {
 }
 
 nav .navbar-nav li a {
-    color: #d1b9ab !important;
+    font-family: Trebuchet MS;
+    color: black !important;
     float: left;
     font-size: 14px;
     text-align: center;
     display: flex;
+}
+
+.navbar-nav li.active>a {
+    color: #d1b9ab !important;
 }
 
 .navbar-toggler {
