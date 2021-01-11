@@ -1,3 +1,5 @@
+/*Composants communs*/
+
 center {
     text-align: center;
 }
@@ -8,7 +10,6 @@ center {
     text-align: center;
     color: black;
     font-family: 'Lora', serif;
-    ;
 }
 
 nav .navbar-nav li a {
@@ -41,14 +42,6 @@ nav .navbar-nav li a {
     }
 }
 
-.square {
-    position: absolute;
-    left: 30%;
-    width: 700px;
-    height: 400px;
-    background: #f5efeb;
-}
-
 .navbar-footer-center {
     position: absolute;
     bottom: 20px;
@@ -75,4 +68,30 @@ h1 {
     font-size: 14px;
     text-align: center;
     display: flex;
+}
+
+
+/*
+HomePage
+*/
+
+#home {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: black;
+    font-family: 'Lora', serif;
+}
+
+.square {
+    position: absolute;
+    left: 30%;
+    width: 700px;
+    height: 400px;
+    background: #f5efeb;
+}
+
+#home-img {
+    position: absolute;
+    left: 10%;
 }
