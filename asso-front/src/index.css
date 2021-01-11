@@ -24,6 +24,10 @@ nav .navbar-nav li a {
     color: #d1b9ab !important;
 }
 
+.navbar-bottom {
+    height: 60px;
+}
+
 .navbar-toggler {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg  xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(209, 185, 171, 1)' stroke-linecap='round'  d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -37,6 +41,13 @@ nav .navbar-nav li a {
     }
 }
 
+.navbar-footer-center {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
@@ -46,4 +57,14 @@ nav .navbar-nav li a {
 
 h1 {
     font-size: 100px;
+}
+
+.navbar-foot {
+    background-color: #f5efeb;
+    font-family: Trebuchet MS;
+    color: black !important;
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
 }

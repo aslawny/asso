@@ -52,11 +52,12 @@
       <router-view />
     </div>
     <!-- footer-->
-    <nav navbar-expand-lg class="navbar fixed-bottom navbar-dark bg-dark">
-      <ul class="navbar-nav mr-auto text-center">
-        <li class="nav-item"></li>
+    <nav navbar-expand-lg class="navbar navbar-bottom fixed-bottom navbar-foot">
+      <ul class="navbar-footer-center navbar-nav mr-auto text-center">
+        <li class="nav-item">
+          <a class="navbar-brand" href="mailto:'john.smith@toto.com'"> Nous Contacter</a>
+        </li>
       </ul>
-      <a class="navbar-brand" href="mailto:'john.smith@toto.com'"> Nous Contacter</a>
     </nav>
   </div>
 </template>
