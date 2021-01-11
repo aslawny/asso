@@ -41,6 +41,14 @@ nav .navbar-nav li a {
     }
 }
 
+.square {
+    position: absolute;
+    left: 30%;
+    width: 700px;
+    height: 400px;
+    background: #f5efeb;
+}
+
 .navbar-footer-center {
     position: absolute;
     bottom: 20px;
