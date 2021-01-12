@@ -6,11 +6,11 @@
       Au moment où la croissance repart, (...) <br />il est essentiel de ne laisser
       personne au bord du chemin." <br />
       Muriel Pericaud, Ministre du Travail<br /><br />
-      <!--div class="home-img">
+      <div class="home-img">
         <router-link to="/contact"><img src="../assets/reconversion.jpg" /></router-link>
         &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
         <router-link to="/coaching"><img src="../assets/coaching.jpg" /></router-link>
-      </div-->
+      </div>
     </div>
   </div>
 </template>
