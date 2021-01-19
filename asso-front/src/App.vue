@@ -47,7 +47,6 @@
       <h4>La Shirley Family présente</h4>
       <h1>La Clinique RH</h1>
       <h4>Depuis 2018</h4>
-      <br />
       <router-view />
     </div>
     <!-- footer-->
@@ -73,7 +72,11 @@ export default {
       return this.activeItem === menuItem;
     },
     setActive: function (menuItem) {
-      this.activeItem = menuItem; // no need for Vue.set()
+      this.activeItem = menuItem;
+    },
+    getCurrentMenu: function () {
+      alert("toto");
+      //alert(this.activeItem);
     },
   },
 };
