@@ -28,7 +28,7 @@
               v-on:click="setActive('contact')"
               :class="{ active: isActive('contact') }"
             >
-              <router-link class="nav-link" to="/contact">Reconversion</router-link>
+              <router-link class="nav-link" to="/contact">Contactez-Moi</router-link>
             </li>
             <li
               class="nav-item"
