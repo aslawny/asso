@@ -5,38 +5,38 @@
       Roosevelt<br />
       <div class="home-img">
         &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <form>
+        <form id="contact_form" v-on:submit.prevent="addContact">
           <div class="form-group">
-            <label for="exampleFormControlInput1"
-              >Votre Email (Pour vous recontacter))</label
-            >
+            <label for="contactEMail">Votre Email (Pour vous recontacter))</label>
             <input
               type="email"
               class="form-control"
-              id="exampleFormControlInput1"
-              placeholder="name@example.com"
+              id="contactEMail"
+              placeholder="nom@exemple.fr"
+              v-model="contact.email"
             />
           </div>
           <div class="form-group">
-            <label for="exampleFormControlSelect1">Aide Souhaitée</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <label for="contactAide">Aide Souhaitée</label>
+            <select class="form-control" id="contactAide" v-model="contact.aide">
               <option>Reconversion</option>
               <option>Coaching</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="exampleFormControlSelect1">Domaine</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <label for="contactDomaine">Domaine</label>
+            <select class="form-control" id="contactDomaine" v-model="contact.domaine">
               <option>Commercial</option>
               <option>Programmation</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Dites nous en plus :</label>
+            <label for="contactComment">Dites nous en plus :</label>
             <textarea
               class="form-control"
-              id="exampleFormControlTextarea1"
+              id="contactComment"
               rows="3"
+              v-model="contact.comment"
             ></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Contactez Moi</button>
@@ -45,3 +45,34 @@
     </div>
   </div>
 </template>
+
+<script>
+import { db } from "../firebaseDb";
+
+export default {
+  data() {
+    return {
+      contact: {},
+    };
+  },
+  methods: {
+    addContact(event) {
+      event.preventDefault();
+      db.collection("contacts")
+        .add(this.contact)
+        .then(() => {
+          alert(
+            "Merci pour votre demande! Nous tenterons de vous recontacter dans les plus brefs délais."
+          );
+          this.contact.email = "";
+          this.contact.aide = "";
+          this.contact.domaine = "";
+          this.contact.commentaire = "";
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+};
+</script>
