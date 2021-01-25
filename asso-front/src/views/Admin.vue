@@ -11,7 +11,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="contact in Users" :key="contact.key">
+          <tr v-for="contact in contacts" :key="contact.key">
             <td>{{ contact.email }}</td>
             <td>{{ contact.aide }}</td>
             <td>{{ contact.domaine }}</td>
@@ -22,7 +22,7 @@
                 class="btn btn-primary"
                 >Edit
               </router-link>
-              <button @click.prevent="deleteUser(contact.key)" class="btn btn-danger">
+              <button @click.prevent="deleteContact(contact.key)" class="btn btn-danger">
                 Delete
               </button>
             </td>
@@ -39,14 +39,14 @@ import { db } from "../firebaseDb";
 export default {
   data() {
     return {
-      Contacts: [],
+      contacts: [],
     };
   },
   created() {
-    db.collection("contatcs").onSnapshot((snapshotChange) => {
-      this.Users = [];
+    db.collection("contacts").onSnapshot((snapshotChange) => {
+      this.contacts = [];
       snapshotChange.forEach((doc) => {
-        this.Contacts.push({
+        this.contacts.push({
           key: doc.id,
           email: doc.data().email,
           aide: doc.data().aide,
@@ -57,10 +57,10 @@ export default {
     });
   },
   methods: {
-    deleteUser(id) {
+    deleteContact(id) {
       if (window.confirm("Do you really want to delete?")) {
         db.collection("contacts")
-          .contact(id)
+          .doc(id)
           .delete()
           .then(() => {
             console.log("Contact deleted!");
