@@ -32,10 +32,10 @@
             </li>
             <li
               class="nav-item"
-              v-on:click="setActive('coaching')"
-              :class="{ active: isActive('coaching') }"
+              v-on:click="setActive('admin')"
+              :class="{ active: isActive('admin') }"
             >
-              <router-link class="nav-link" to="/coaching">Coaching</router-link>
+              <router-link class="nav-link" to="/admin">Admin</router-link>
             </li>
           </ul>
         </div>
@@ -53,7 +53,7 @@
     <nav navbar-expand-lg class="navbar navbar-bottom fixed-bottom navbar-foot">
       <ul class="navbar-footer-center navbar-nav mr-auto text-center">
         <li class="nav-item">
-          <a class="navbar-brand" href="mailto:'john.smith@toto.com'"> Nous Contacter</a>
+          <a class="navbar-brand" href=""> Copyright 2018</a>
         </li>
       </ul>
     </nav>
@@ -73,10 +73,6 @@ export default {
     },
     setActive: function (menuItem) {
       this.activeItem = menuItem;
-    },
-    getCurrentMenu: function () {
-      alert("toto");
-      //alert(this.activeItem);
     },
   },
 };
