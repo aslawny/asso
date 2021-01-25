@@ -8,6 +8,7 @@
             <th>Type d'aide</th>
             <th>Reconversion</th>
             <th>Commentaire</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@
                 class="btn btn-primary"
                 >Edit
               </router-link>
+
               <button @click.prevent="deleteContact(contact.key)" class="btn btn-danger">
                 Delete
               </button>

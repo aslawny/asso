@@ -14,18 +14,24 @@
               id="contactEMail"
               placeholder="nom@exemple.fr"
               v-model="contact.email"
+              required
             />
           </div>
           <div class="form-group">
             <label for="contactAide">Aide Souhaitée</label>
-            <select class="form-control" id="contactAide" v-model="contact.aide">
+            <select class="form-control" id="contactAide" v-model="contact.aide" required>
               <option>Reconversion</option>
               <option>Coaching</option>
             </select>
           </div>
           <div class="form-group">
             <label for="contactDomaine">Domaine</label>
-            <select class="form-control" id="contactDomaine" v-model="contact.domaine">
+            <select
+              class="form-control"
+              id="contactDomaine"
+              v-model="contact.domaine"
+              required
+            >
               <option>Commercial</option>
               <option>Programmation</option>
             </select>
@@ -37,6 +43,7 @@
               id="contactComment"
               rows="3"
               v-model="contact.comment"
+              required
             ></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Contactez Moi</button>
