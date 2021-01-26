@@ -1,6 +1,6 @@
 <template>
-  <div class="row justify-content-center">
-    <div class="col-md-5">
+  <div class="justify-content-center">
+    <div class="col-md-12">
       <h3 class="text-center">Update Contact</h3>
       <form @submit.prevent="onUpdateForm">
         <div class="form-group">
@@ -16,9 +16,14 @@
         </div>
         <div class="form-group">
           <label>Domaine</label>
-          <select class="form-control" id="contactAide" v-model="contact.aide" required>
-            <option>Reconversion</option>
-            <option>Coaching</option>
+          <select
+            class="form-control"
+            id="contactDomaine"
+            v-model="contact.domaine"
+            required
+          >
+            <option>Commercial</option>
+            <option>Programmation</option>
           </select>
         </div>
         <div class="form-group">
@@ -27,9 +32,10 @@
             class="form-control"
             id="contactComment"
             rows="3"
-            v-model="contact.comment"
+            v-model="contact.commentaire"
             required
           ></textarea>
+          <button type="submit" class="btn btn-primary">Mettre a jour</button>
         </div>
       </form>
     </div>
@@ -64,7 +70,7 @@ export default {
         .update(this.contact)
         .then(() => {
           console.log("Contact successfully updated!");
-          this.$router.push("/list");
+          this.$router.push("/admin");
         })
         .catch((error) => {
           console.log(error);

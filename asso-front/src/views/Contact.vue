@@ -42,7 +42,7 @@
               class="form-control"
               id="contactComment"
               rows="3"
-              v-model="contact.comment"
+              v-model="contact.commentaire"
               required
             ></textarea>
           </div>

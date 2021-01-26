@@ -19,7 +19,7 @@
             <td>{{ contact.commentaire }}</td>
             <td>
               <router-link
-                :to="{ email: 'edit', params: { id: contact.key } }"
+                :to="{ name: 'edit', params: { id: contact.key } }"
                 class="btn btn-primary"
                 >Edit
               </router-link>
