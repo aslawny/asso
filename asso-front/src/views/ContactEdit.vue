@@ -1,7 +1,7 @@
 <template>
-  <div class="justify-content-center">
+  <div class="justify-content-center container">
     <div class="col-md-12">
-      <h3 class="text-center">Update Contact</h3>
+      <h3 class="text-center">Mise à jour de contact Contact</h3>
       <form @submit.prevent="onUpdateForm">
         <div class="form-group">
           <label>Email</label>
