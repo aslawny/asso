@@ -26,7 +26,7 @@
         }
         
         .navbar-bottom {
-            height: 50px;
+            height: 20px;
         }
         
         .navbar-toggler {
@@ -44,7 +44,6 @@
         
         .navbar-footer-center {
             position: absolute;
-            bottom: 20px;
             left: 50%;
             transform: translatex(-50%);
         }
@@ -98,4 +97,18 @@ HomePage
         .table-striped>tbody>tr:nth-child(2n+1)>td,
         .table-striped>tbody>tr:nth-child(2n+1)>th {
             background-color: #f5efeb;
+        }
+        
+        button.page-link {
+            display: inline-block;
+        }
+        
+        button.page-link {
+            color: black;
+            font-family: 'Lora', serif;
+        }
+        
+        .offset {
+            width: 500px !important;
+            margin: 10px auto;
         }
