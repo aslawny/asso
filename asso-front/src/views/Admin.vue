@@ -52,6 +52,7 @@ export default {
   data() {
     return {
       contacts: [],
+      originalContact: [],
       contactSearch: "",
     };
   },
@@ -71,6 +72,7 @@ export default {
             commentaire: doc.data().commentaire,
           });
         });
+        this.originalContact = this.contacts;
       });
     },
     deleteContact(id) {
@@ -88,13 +90,14 @@ export default {
     },
     searchContact: function () {
       if (this.contactSearch == "") {
+        this.contacts = this.originalContact;
         this.fetchContact();
       }
       var searchedContact = [];
-      for (var i = 0; i < this.contacts.length; i++) {
-        var contactEMail = this.contacts[i]["email"].toLowerCase();
+      for (var i = 0; i < this.originalContact.length; i++) {
+        var contactEMail = this.originalContact[i]["email"].toLowerCase();
         if (contactEMail.indexOf(this.contactSearch.toLowerCase()) >= 0) {
-          searchedContact.push(this.contacts[i]);
+          searchedContact.push(this.originalContact[i]);
         }
       }
       this.contacts = searchedContact;
