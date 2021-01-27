@@ -27,6 +27,19 @@
           </select>
         </div>
         <div class="form-group">
+          <label>Statut</label>
+          <select
+            class="form-control"
+            id="contactStatut"
+            v-model="contact.statut"
+            required
+          >
+            <option>A traiter</option>
+            <option>En cours</option>
+            <option>Traité</option>
+          </select>
+        </div>
+        <div class="form-group">
           <label>Commentaire</label>
           <textarea
             class="form-control"

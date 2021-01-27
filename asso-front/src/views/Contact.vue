@@ -65,6 +65,7 @@ export default {
   methods: {
     addContact(event) {
       event.preventDefault();
+      this.contact.statut = "A traiter";
       db.collection("contacts")
         .add(this.contact)
         .then(() => {

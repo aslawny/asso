@@ -18,6 +18,7 @@
             <th>Type d'aide</th>
             <th>Reconversion</th>
             <th>Commentaire</th>
+            <th>Statut</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -27,6 +28,7 @@
             <td>{{ contact.aide }}</td>
             <td>{{ contact.domaine }}</td>
             <td>{{ contact.commentaire }}</td>
+            <td>{{ contact.statut }}</td>
             <td>
               <router-link
                 :to="{ name: 'edit', params: { id: contact.key } }"
@@ -70,6 +72,7 @@ export default {
             aide: doc.data().aide,
             domaine: doc.data().domaine,
             commentaire: doc.data().commentaire,
+            statut: doc.data().statut,
           });
         });
         this.originalContact = this.contacts;
@@ -96,7 +99,24 @@ export default {
       var searchedContact = [];
       for (var i = 0; i < this.originalContact.length; i++) {
         var contactEMail = this.originalContact[i]["email"].toLowerCase();
+        var contactStatut = this.originalContact[i]["statut"].toLowerCase();
+        var contactAide = this.originalContact[i]["aide"].toLowerCase();
+        var contactDomaine = this.originalContact[i]["domaine"].toLowerCase();
+        var contactCommentaire = this.originalContact[i]["commentaire"].toLowerCase();
+
         if (contactEMail.indexOf(this.contactSearch.toLowerCase()) >= 0) {
+          searchedContact.push(this.originalContact[i]);
+        }
+        if (contactStatut.indexOf(this.contactSearch.toLowerCase()) >= 0) {
+          searchedContact.push(this.originalContact[i]);
+        }
+        if (contactAide.indexOf(this.contactSearch.toLowerCase()) >= 0) {
+          searchedContact.push(this.originalContact[i]);
+        }
+        if (contactDomaine.indexOf(this.contactSearch.toLowerCase()) >= 0) {
+          searchedContact.push(this.originalContact[i]);
+        }
+        if (contactCommentaire.indexOf(this.contactSearch.toLowerCase()) >= 0) {
           searchedContact.push(this.originalContact[i]);
         }
       }
