@@ -30,6 +30,9 @@
             >
               <router-link class="nav-link" to="/contact">Contactez-Moi</router-link>
             </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/login">Connexion</router-link>
+            </li>
             <li
               class="nav-item"
               v-on:click="setActive('admin')"

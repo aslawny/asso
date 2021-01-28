@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "api-key",
+    apiKey: "AIzaSyDucRjpdrSfWu_hq82SkMSY64JvyVnSrKc",
     authDomain: "asso-f4029.firebaseapp.com",
     databaseURL: "https://asso-f4029-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "asso-f4029",
