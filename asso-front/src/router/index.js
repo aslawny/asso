@@ -4,6 +4,7 @@ import Contact from "@/views/Contact.vue";
 import ContactEdit from "@/views/ContactEdit.vue";
 import Admin from "@/views/Admin.vue";
 import Login from "@/views/Login.vue";
+import Logout from "@/views/Logout.vue";
 import NotFound from "@/views/NotFound.vue";
 
 const routes = [{
@@ -25,6 +26,11 @@ const routes = [{
         path: "/login",
         name: "Login",
         component: Login,
+    },
+    {
+        path: "/logout",
+        name: "Logout",
+        component: Logout,
     },
     {
         path: '/edit/:id',

@@ -41,6 +41,14 @@
             >
               <router-link class="nav-link" to="/admin">Admin</router-link>
             </li>
+            <li
+              v-if="admin"
+              class="nav-item"
+              v-on:click="setActive('logout')"
+              :class="{ active: isActive('logout') }"
+            >
+              <router-link class="nav-link" to="/logout">Logout</router-link>
+            </li>
           </ul>
         </div>
       </nav>
