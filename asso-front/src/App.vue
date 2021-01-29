@@ -30,10 +30,11 @@
             >
               <router-link class="nav-link" to="/contact">Contactez-Moi</router-link>
             </li>
-            <li class="nav-item">
+            <li v-if="!admin" class="nav-item">
               <router-link class="nav-link" to="/login">Connexion</router-link>
             </li>
             <li
+              v-if="admin"
               class="nav-item"
               v-on:click="setActive('admin')"
               :class="{ active: isActive('admin') }"
@@ -64,11 +65,19 @@
 </template>
 
 <script>
+import firebase from "firebase";
 export default {
   name: "App",
   components: {},
   data() {
-    return { activeItem: "/" };
+    return { activeItem: "/", user: "", admin: false };
+  },
+  created() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.admin = true;
+      }
+    });
   },
   methods: {
     isActive: function (menuItem) {
