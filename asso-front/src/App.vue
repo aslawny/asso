@@ -65,7 +65,8 @@
     <nav navbar-expand-lg class="navbar navbar-bottom fixed-bottom navbar-foot">
       <ul class="navbar-footer-center navbar-nav mr-auto text-center">
         <li class="nav-item">
-          <a class="navbar-brand" href=""> Copyright 2018</a>
+          <a v-if="admin" class="navbar-brand" href=""> Welcome >{{ login }}</a>
+          <a v-else class="navbar-brand" href=""> Copyright 2018 </a>
         </li>
       </ul>
     </nav>
@@ -78,13 +79,16 @@ export default {
   name: "App",
   components: {},
   data() {
-    return { activeItem: "/", user: "", admin: false };
+    return { activeItem: "/", login: "", admin: false };
   },
   created() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.admin = true;
+        this.login = user.email;
       }
+      console.log("admin=" + this.admin);
+      console.log("login=" + this.login);
     });
   },
   methods: {
