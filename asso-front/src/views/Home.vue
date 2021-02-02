@@ -7,7 +7,7 @@
       bord du chemin." <br />
       Muriel Pericaud, Ministre du Travail<br /><br />
       <div class="home-img">
-        <router-link to="/contact"><img src="../assets/reconversion.jpg" /></router-link>
+        <router-link to="/contact"><img src="../assets/logo.webp" /></router-link>
       </div>
     </div>
   </div>
