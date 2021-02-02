@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="admin">
     <div class="col-md-12">
       <div class="form-group">
         <input
@@ -45,10 +45,15 @@
       </table>
     </div>
   </div>
+  <div v-else>
+    <br /><br />
+    <h3>Sorry but you need to be admin to see those data ;)</h3>
+  </div>
 </template>
 
 <script>
 import { db } from "../firebaseDb";
+import firebase from "firebase";
 
 export default {
   data() {
@@ -56,10 +61,17 @@ export default {
       contacts: [],
       originalContact: [],
       contactSearch: "",
+      admin: false,
+      user: "",
     };
   },
   created() {
-    this.fetchContact();
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.admin = true;
+        this.fetchContact();
+      }
+    });
   },
   methods: {
     fetchContact: function () {
