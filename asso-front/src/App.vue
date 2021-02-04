@@ -87,8 +87,6 @@ export default {
         this.admin = true;
         this.login = user.email;
       }
-      console.log("admin=" + this.admin);
-      console.log("login=" + this.login);
     });
   },
   methods: {
