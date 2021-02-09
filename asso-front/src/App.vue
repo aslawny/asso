@@ -30,9 +30,6 @@
             >
               <router-link class="nav-link" to="/contact">Contactez-Moi</router-link>
             </li>
-            <li v-if="!admin" class="nav-item">
-              <router-link class="nav-link" to="/login">Connexion</router-link>
-            </li>
             <li
               v-if="admin"
               class="nav-item"
@@ -67,7 +64,7 @@
       <ul class="navbar-footer-center navbar-nav mr-auto text-center">
         <li class="nav-item">
           <a v-if="admin" class="navbar-brand" href=""> Welcome >{{ login }}</a>
-          <a v-else class="navbar-brand" href=""> Copyright 2018 </a>
+          <router-link v-else to="/login">Copyright 2021</router-link>
         </li>
       </ul>
     </nav>
