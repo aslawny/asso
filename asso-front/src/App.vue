@@ -55,11 +55,12 @@
     </div>
     <!-- current page -->
     <div>
-      <br /><br /><br />
+      <br /><br />
       <h4>La Shirley Family présente</h4>
       <h1>La Clinique RH</h1>
       <h4>Depuis 2018</h4>
       <router-view />
+      <br />
     </div>
     <!-- footer-->
     <nav navbar-expand-lg class="navbar navbar-bottom fixed-bottom navbar-foot">
