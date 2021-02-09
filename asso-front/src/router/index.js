@@ -3,6 +3,7 @@ import Home from "@/views/Home.vue";
 import Contact from "@/views/Contact.vue";
 import ContactEdit from "@/views/ContactEdit.vue";
 import Admin from "@/views/Admin.vue";
+import About from "@/views/About.vue";
 import Login from "@/views/Login.vue";
 import Logout from "@/views/Logout.vue";
 import NotFound from "@/views/NotFound.vue";
@@ -21,6 +22,11 @@ const routes = [{
         path: "/admin",
         name: "Admin",
         component: Admin,
+    },
+    {
+        path: "/about",
+        name: "About",
+        component: About,
     },
     {
         path: "/login",

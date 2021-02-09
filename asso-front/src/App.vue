@@ -46,6 +46,13 @@
             >
               <router-link class="nav-link" to="/logout">Logout</router-link>
             </li>
+            <li
+              class="nav-item"
+              v-on:click="setActive('about')"
+              :class="{ active: isActive('about') }"
+            >
+              <router-link class="nav-link" to="/about">A Propos</router-link>
+            </li>
           </ul>
         </div>
       </nav>
